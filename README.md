@@ -58,7 +58,7 @@ else:
     cmd = "C"                               # 在中間 → 前進接近
 ```
 #### uart_node.py
-	將指令以 UART 傳送給 Arduino，自動偵測序列埠。
+將指令以 UART 傳送給 Arduino，自動偵測序列埠。
   ```python
 try:
     self.ser = serial.Serial("/dev/ttyUSB0", 9600, timeout=1)
