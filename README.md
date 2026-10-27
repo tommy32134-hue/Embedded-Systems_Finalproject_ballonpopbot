@@ -68,7 +68,7 @@ except:
     except:
         self.get_logger().error("Arduino not found.")
 ```
-##Arudino底層控制說明
+## Arudino底層控制說明
 #### balloon_final.ino
   依狀態機執行動作
   ```cpp
@@ -97,6 +97,21 @@ if (attackCount >= 5) {
   attackCount = 0;
 }
 ```
+## 硬體元件
+
+| 元件 | 數量 | 用途 |
+|---|:---:|---|
+| Raspberry Pi | 1 | 上層運算，執行 ROS 2 與 YOLO 辨識 |
+| Arduino UNO | 1 | 下層控制，驅動馬達與伺服機構 |
+| USB 攝影機 | 1 | 擷取 640×480 即時影像 |
+| L298N 馬達驅動模組 | 1 | 控制左右直流馬達的方向與轉速 |
+| 直流減速馬達 | 2 | 驅動左右輪 |
+| SG90 伺服馬達 | 1 | 驅動攻擊手臂 |
+| 自走車底盤（含輪胎） | 1 | 車體結構 |
+| 木棍＋針頭 | 1 組 | 攻擊機構（手臂＋打擊板） |
+| USB 傳輸線 | 1 | Raspberry Pi 與 Arduino 之間的 UART 通訊 |
+| 電池／行動電源 | — | 供電 |
+
 
 
 
