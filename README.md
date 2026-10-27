@@ -69,7 +69,7 @@ except:
     except:
         self.get_logger().error("Arduino not found.")
 ```
-## Arudino底層控制說明
+## Arduino底層控制說明
 #### balloon_final.ino
   依狀態機執行動作
   ```cpp
